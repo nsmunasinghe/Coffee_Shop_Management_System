@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="894.0" styleClass="bg-blueGray" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bion.project2.controllers.OrderFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="574.0" prefWidth="826.0" styleClass="bg-blueGray" stylesheets="@styles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <AnchorPane prefHeight="571.0" prefWidth="300.0" styleClass="bg-glass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="-4.0" layoutY="-13.0" prefHeight="552.0" prefWidth="277.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="134.0" prefWidth="278.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="14.0" prefHeight="196.0" prefWidth="278.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="lbl_CustomerName" text="Customer Name" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_Address" text="Address" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_ContactNo" text="Contact No." textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <TableView fx:id="tbl_OrderInfo" prefHeight="505.0" prefWidth="278.0" styleClass="shad-w">
+                           <columns>
+                              <TableColumn fx:id="col_ProductID" text="Product ID" />
+                              <TableColumn fx:id="col_Description" prefWidth="115.0" text="Description" />
+                              <TableColumn fx:id="col_Quantity" text="Qty" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </AnchorPane>
+            <TableView fx:id="tbl_Orders" prefHeight="572.0" prefWidth="555.0" styleClass="shad-w" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="col_OrderID" prefWidth="50.0" text="Order ID" />
+                  <TableColumn fx:id="col_CustomerID" prefWidth="50.0" text="Customer ID" />
+                  <TableColumn fx:id="col_Total" prefWidth="60.0" text="Total" />
+                  <TableColumn fx:id="col_PaidAmount" minWidth="9.0" prefWidth="60.0" text="Paid Amount" />
+                  <TableColumn fx:id="col_Balance" prefWidth="60.0" text="Balance" />
+                  <TableColumn fx:id="col_Date" text="Date" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

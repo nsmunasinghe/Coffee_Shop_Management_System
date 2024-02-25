@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+  <session-factory>
+    <!-- JDBC Database Connection Setting -->
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/coffee_shop?createDatabaseIfNotExist=true</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">1234</property>
+
+    <!-- Specify Dialect -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
+
+    <!-- Echo All executed SQL to Console -->
+    <property name = "show_sql">true</property>
+
+    <!-- Drop And Re-Create the database schema on startup -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+  </session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="230.0" minWidth="230.0" prefHeight="230.0" prefWidth="230.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bion.project2.controllers.ProductCardController">
+   <children>
+      <AnchorPane prefHeight="230.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="bg-glass" />
+            <String fx:value="rad-12" />
+            <String fx:value="shad-b" />
+         </styleClass>
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="230.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox styleClass="rad-12">
+                     <children>
+                        <ImageView fx:id="imgView" fitHeight="139.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="lbl_Description" prefHeight="24.0" prefWidth="131.0" text="Product Name" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <FontAwesomeIconView fill="#ffae00" glyphName="STAR_HALF_ALT" size="10" wrappingWidth="9.285714149475098" />
+                        <Label prefHeight="0.0" prefWidth="131.0" text="4.5" textFill="#ffbb00">
+                           <font>
+                              <Font name="Product Sans" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="218.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="lbl_UnitPrice" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="0.0" prefWidth="103.0" styleClass="lbl-CardPrice" text="\$ 0.00" textFill="#ffc654">
+                           <font>
+                              <Font name="Product Sans Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="7.0" prefWidth="79.0" styleClass="bg-BtnCard">
+                           <children>
+                              <AnchorPane fx:id="btn_Minus" layoutX="5.0" layoutY="5.0" onMouseClicked="#changeQuantity" prefHeight="20.0" prefWidth="20.0" styleClass="btn-ChangeQty">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="MINUS" layoutX="6.0" layoutY="14.0" size="10" />
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="lbl_Quantity" alignment="CENTER" layoutX="26.0" layoutY="5.0" prefHeight="22.0" prefWidth="28.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="btn_Plus" layoutX="56.0" layoutY="5.0" onMouseClicked="#changeQuantity" prefHeight="20.0" prefWidth="20.0" styleClass="btn-ChangeQty">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="PLUS" layoutX="6.0" layoutY="14.0" size="10" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets left="2.0" right="2.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="lbl_ProductID" alignment="CENTER" prefHeight="20.0" prefWidth="56.0" styleClass="lbl-CardPrdID" text="P001" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+   <styleClass>
+      <String fx:value="bg-black" />
+      <String fx:value="rad-12" />
+   </styleClass>
+</AnchorPane>

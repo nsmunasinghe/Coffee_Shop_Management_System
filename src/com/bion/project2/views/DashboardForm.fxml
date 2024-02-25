@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="870.0" styleClass="bg-blueGray" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bion.project2.controllers.DashboardFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="11.0" styleClass="lbl-Title" text="DASHBOARD" textFill="#586683" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="11.0">
+         <font>
+            <Font name="Product Sans Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_Clock" alignment="CENTER_RIGHT" layoutX="731.0" layoutY="29.0" prefHeight="28.0" prefWidth="365.0" text="88.88.88" textFill="WHITE" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="11.0">
+         <font>
+            <Font name="DS-Digital Bold" size="22.0" />
+         </font>
+      </Label>
+      <VBox layoutX="556.0" layoutY="63.0" prefHeight="492.0" prefWidth="387.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <Label text="Customers" textFill="#949ca8">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <FontAwesomeIconView fill="#ffaa00" glyphName="BAR_CHART" size="1.4em" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="280.0" prefWidth="300.0" stylesheets="@styles.css">
+               <children>
+                  <BarChart fx:id="barChart_Customers" alternativeRowFillVisible="false" barGap="0.0" categoryGap="5.0" horizontalZeroLineVisible="false" layoutX="7.0" layoutY="35.0" legendVisible="false" prefHeight="202.0" prefWidth="593.0" scaleShape="false" titleSide="BOTTOM" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <xAxis>
+                        <CategoryAxis prefHeight="18.0" prefWidth="333.0" side="BOTTOM" tickLength="0.0" tickMarkVisible="false" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis minorTickVisible="false" side="LEFT" tickLabelFill="WHITE" tickUnit="10.0" upperBound="90.0" />
+                     </yAxis>
+                  </BarChart>
+               </children>
+               <styleClass>
+                  <String fx:value="rad-12" />
+                  <String fx:value="bg-black" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="20.0" />
+               </padding>
+            </AnchorPane>
+            <HBox spacing="20.0">
+               <children>
+                  <Label text="Income" textFill="#949ca8">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <FontAwesomeIconView fill="#ffaa00" glyphName="LINE_CHART" size="1.4em" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="280.0" prefWidth="300.0" stylesheets="@styles.css">
+               <styleClass>
+                  <String fx:value="bg-black" />
+                  <String fx:value="rad-12" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <children>
+                  <LineChart fx:id="lineChart_Income" alternativeRowFillVisible="false" horizontalZeroLineVisible="false" layoutX="-4.0" layoutY="-55.0" legendVisible="false" prefHeight="225.0" prefWidth="538.0" titleSide="BOTTOM" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" tickLabelGap="2.0" tickLength="0.0" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis minorTickVisible="false" prefHeight="50.0" prefWidth="28.0" side="LEFT" tickLabelFill="WHITE" tickUnit="10.0" upperBound="90.0" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="15.0" layoutY="85.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <AnchorPane maxHeight="260.0" minWidth="446.0" prefHeight="226.0" prefWidth="446.0" stylesheets="@styles.css">
+               <children>
+                  <VBox prefHeight="216.0" prefWidth="545.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="151.0" prefWidth="635.0" spacing="10.0">
+                           <children>
+                              <AnchorPane maxHeight="100.0" minHeight="98.0" prefHeight="98.0" prefWidth="520.0" stylesheets="@styles.css">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="11.0" prefHeight="20.0" prefWidth="103.0" styleClass="shad-b" text="Today  Income" textFill="#ffd485" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Segoe UI Black Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_TodayIncome" layoutX="13.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" styleClass="shad-b" text="LKR 0.00" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#ffdf8c" glyphName="MONEY" layoutX="129.0" layoutY="65.0" size="2.6em" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="bg-glass" />
+                                    <String fx:value="rad-12" />
+                                    <String fx:value="in-shad-w" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="100.0" minHeight="98.0" prefHeight="98.0" prefWidth="520.0" stylesheets="@styles.css">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="11.0" prefHeight="20.0" prefWidth="91.0" styleClass="shad-b" text="Total Income" textFill="#ffd485" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Segoe UI Black Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_TotalIncome" layoutX="13.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" styleClass="shad-b" text="LKR 0.00" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#ffdf8c" glyphName="BANK" layoutX="148.0" layoutY="66.0" size="2.6em" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="bg-glass" />
+                                    <String fx:value="rad-12" />
+                                    <String fx:value="in-shad-w" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <AnchorPane maxHeight="100.0" minHeight="98.0" prefHeight="98.0" prefWidth="520.0" stylesheets="@styles.css">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="11.0" prefHeight="20.0" prefWidth="84.0" styleClass="shad-b" text="Order Count" textFill="#ffd485" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Segoe UI Black Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_OrderCount" layoutX="11.0" layoutY="40.0" prefHeight="32.0" prefWidth="69.0" styleClass="shad-b" text="0" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#ffdf8c" glyphName="CART_PLUS" layoutX="133.0" layoutY="65.0" size="2.6em" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="bg-glass" />
+                                    <String fx:value="rad-12" />
+                                    <String fx:value="in-shad-w" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="100.0" minHeight="98.0" prefHeight="98.0" prefWidth="520.0" stylesheets="@styles.css">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="22.0" prefHeight="20.0" prefWidth="140.0" styleClass="shad-b" text="Sold Count" textFill="#ffd485" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Segoe UI Black Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_SoldProductsCount" layoutX="13.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" styleClass="shad-b" text="0" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#ffdf8c" glyphName="BALANCE_SCALE" layoutX="137.0" layoutY="67.0" size="2.6em" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="bg-glass" />
+                                    <String fx:value="rad-12" />
+                                    <String fx:value="in-shad-w" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="bg-black" />
+                  <String fx:value="rad-12" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane prefHeight="380.0" prefWidth="446.0" stylesheets="@styles.css">
+               <styleClass>
+                  <String fx:value="bg-black" />
+                  <String fx:value="rad-12" />
+               </styleClass>
+               <children>
+                  <PieChart fx:id="pieChart_SoldProducts" clockwise="false" labelLineLength="0.0" labelsVisible="false" layoutX="-60.0" layoutY="-53.0" legendSide="RIGHT" prefHeight="364.0" prefWidth="366.0" startAngle="90.0" title="Sold Products            " AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <FontAwesomeIconView fill="#00ff68" glyphName="PIE_CHART" layoutX="260.0" layoutY="33.39999961853027" size="1.4em" textAlignment="RIGHT" AnchorPane.topAnchor="9.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

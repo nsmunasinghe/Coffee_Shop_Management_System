@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="loginForm" maxHeight="500.0" maxWidth="700.0" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bion.project2.controllers.LoginFormController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-black" stylesheets="@styles.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="505.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <StackPane minWidth="350.0" prefHeight="505.0" prefWidth="683.0">
+                     <children>
+                        <AnchorPane fx:id="pane_SUp2" layoutX="10.0" layoutY="10.0" maxWidth="683.0" prefHeight="500.0" prefWidth="683.0" styleClass="bg-black" stylesheets="@styles.css" visible="false">
+                           <children>
+                              <Label styleClass="border-L" stylesheets="@styles.css" text="Create Account" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" layoutX="130.0" layoutY="152.0" prefHeight="365.0" prefWidth="220.0" spacing="15.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                 <children>
+                                    <TextField fx:id="txtUsername_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="username" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                    <PasswordField fx:id="txtPassword_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="password" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </PasswordField>
+                                    <TextField fx:id="txtNIC_SUp" layoutX="10.0" layoutY="92.0" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="national identity" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="cmbQuestion_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="800.0" promptText="Select an Question" styleClass="list-view" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ComboBox>
+                                    <TextField fx:id="txtAnswer_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="answer" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Button minHeight="40.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="40.0" prefWidth="800.0" styleClass="btn-login" stylesheets="@styles.css" text="SIGN UP" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btnBack_SUp" layoutX="78.0" layoutY="450.0" mnemonicParsing="false" onAction="#navigate" prefHeight="30.0" prefWidth="70.0" styleClass="btn-back" text=" Back" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView id="graphic_back" fill="WHITE" glyphName="ANGLE_LEFT" size="1.2em" styleClass="btn-grd2" text="" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="65.0" right="65.0" top="30.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pane_SUp1" maxWidth="683.0" prefHeight="500.0" prefWidth="683.0" styleClass="bg-black" stylesheets="@styles.css">
+                           <children>
+                              <Label styleClass="border-L" stylesheets="@styles.css" text="Create Account" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" layoutX="65.0" layoutY="213.0" prefHeight="394.0" prefWidth="220.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                 <children>
+                                    <StackPane maxHeight="137.0" maxWidth="137.0" prefHeight="137.0" prefWidth="137.0" styleClass="bg-RoundImg">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox alignment="CENTER" spacing="5.0">
+                                             <children>
+                                                <FontAwesomeIconView fill="#253936" glyphName="IMAGE" size="3em" />
+                                                <Label text="Click here" textFill="#366f67" />
+                                             </children>
+                                          </VBox>
+                                          <ImageView fx:id="imgView_Employee" fitHeight="137.0" fitWidth="137.0" onMouseClicked="#importImage" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </StackPane>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="txtFirstName_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="fisrt name" styleClass="txtField-Login" stylesheets="@styles.css">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                          <TextField fx:id="txtLastName_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="last name" styleClass="txtField-Login" stylesheets="@styles.css">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="txtAddress_SUp" layoutX="10.0" layoutY="283.0" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="address" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                    <TextField fx:id="txtMobile_SUp" minHeight="30.0" prefHeight="30.0" prefWidth="553.0" promptText="mobile" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Button fx:id="btnNext_SUp" minHeight="40.0" mnemonicParsing="false" onAction="#navigate" prefHeight="40.0" prefWidth="800.0" styleClass="btn-login" stylesheets="@styles.css" text="Next" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="65.0" right="65.0" top="30.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane minWidth="350.0" prefHeight="505.0" prefWidth="683.0">
+                     <children>
+                        <AnchorPane fx:id="pane_NPw" maxWidth="683.0" prefHeight="500.0" prefWidth="683.0" styleClass="bg-black" stylesheets="@styles.css" visible="false">
+                           <children>
+                              <Label layoutX="40.0" layoutY="63.0" styleClass="border-L" stylesheets="@styles.css" text="Forgot Password" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="40.0" layoutY="144.0" spacing="15.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <PasswordField fx:id="txtNewPassword" prefHeight="40.0" prefWidth="220.0" promptText="New password" stylesheets="@styles.css">
+                                       <styleClass>
+                                          <String fx:value="text-field" />
+                                          <String fx:value="txtField-Login" />
+                                       </styleClass>
+                                    </PasswordField>
+                                    <PasswordField fx:id="txtConfirmPassword" prefHeight="40.0" prefWidth="220.0" promptText="Confirm Password" stylesheets="@styles.css">
+                                       <styleClass>
+                                          <String fx:value="text-field" />
+                                          <String fx:value="txtField-Login" />
+                                       </styleClass>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" />
+                                       </VBox.margin>
+                                    </PasswordField>
+                                    <Button mnemonicParsing="false" onAction="#btnChangePwOnAction" prefHeight="40.0" prefWidth="220.0" styleClass="btn-login" stylesheets="@styles.css" text="Change Password" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btnBack_NPw" layoutX="40.0" layoutY="346.0" mnemonicParsing="false" onAction="#navigate" prefHeight="30.0" prefWidth="23.0" styleClass="btn-back" stylesheets="@styles.css" text=" Back" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView id="graphic_back" fill="#ffddb0" glyphName="ANGLE_LEFT" size="1.2em" text="" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="65.0" right="65.0" top="30.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pane_FPw" maxWidth="683.0" prefHeight="500.0" prefWidth="683.0" styleClass="bg-black" stylesheets="@styles.css" visible="false">
+                           <children>
+                              <Label styleClass="border-L" stylesheets="@styles.css" text="Forgot Password" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="118.0" prefHeight="246.0" prefWidth="220.0" spacing="20.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0">
+                                 <children>
+                                    <TextField fx:id="txtUsername_Fgt" minHeight="40.0" minWidth="220.0" prefHeight="40.0" prefWidth="553.0" promptText="username" styleClass="txtField-Login" stylesheets="@styles.css" />
+                                    <ComboBox fx:id="cmbQuestion_FPw" minHeight="40.0" minWidth="220.0" prefHeight="40.0" prefWidth="553.0" promptText="Select an Question" styleClass="list-view" stylesheets="@styles.css" />
+                                    <TextField fx:id="txtAnswer_Fgt" minHeight="40.0" minWidth="220.0" prefHeight="40.0" prefWidth="553.0" promptText="answer" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <VBox.margin>
+                                          <Insets bottom="25.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Button fx:id="btnNext_Fgt" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" onAction="#navigate" prefHeight="40.0" prefWidth="553.0" styleClass="btn-login" stylesheets="@styles.css" text="Next" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btnBack_Fgt" layoutX="6.0" layoutY="404.0" mnemonicParsing="false" onAction="#navigate" prefHeight="30.0" prefWidth="70.0" styleClass="btn-back" text=" Back" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView id="graphic_back" fill="WHITE" glyphName="ANGLE_LEFT" size="1.2em" styleClass="btn-grd2" text="" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="65.0" right="65.0" top="30.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pane_Login" maxWidth="683.0" prefHeight="500.0" prefWidth="683.0" styleClass="bg-black" stylesheets="@styles.css">
+                           <children>
+                              <Label layoutX="40.0" layoutY="83.0" styleClass="border-L" stylesheets="@styles.css" text="Login Account" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Product Sans Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="40.0" layoutY="151.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="txtUsername_Log" minHeight="40.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="220.0" promptText="username" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                    <PasswordField fx:id="txtPassword_Log" minHeight="40.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="220.0" promptText="password" styleClass="txtField-Login" stylesheets="@styles.css">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </PasswordField>
+                                    <Hyperlink fx:id="linkForgot" onAction="#navigate" text="Forgot Password" textFill="#826e518f">
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" />
+                                       </VBox.margin>
+                                    </Hyperlink>
+                                    <Button fx:id="btnLogin" defaultButton="true" minHeight="40.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="220.0" styleClass="btn-login" stylesheets="@styles.css" text="LOGIN" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="65.0" right="65.0" top="30.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="pane_Image" maxHeight="766.0" maxWidth="683.0" prefHeight="440.0" prefWidth="683.0" styleClass="bg-blueGray" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="-50.0" layoutY="118.0" prefHeight="400.0" prefWidth="300.0" styleClass="bg-black" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="imgView_Login" fitHeight="500.0" fitWidth="350.0" layoutX="59.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ImageView fx:id="imgView_Logo_Login" fitHeight="236.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="64.0" />
+                     </children></AnchorPane>
+                  <Button fx:id="btnAlreadyHave" layoutX="40.0" layoutY="328.0" mnemonicParsing="false" onAction="#navigate" prefHeight="50.0" prefWidth="220.0" styleClass="bg-trans" stylesheets="@styles.css" text="Already have an Account" visible="false" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0">
+                     <font>
+                        <Font name="Product Sans Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCreateAcc" layoutX="40.0" layoutY="328.0" mnemonicParsing="false" onAction="#navigate" prefHeight="50.0" prefWidth="220.0" styleClass="btn-trans" stylesheets="@styles.css" text="Create new Account" wrapText="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0">
+                     <font>
+                        <Font name="Product Sans Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

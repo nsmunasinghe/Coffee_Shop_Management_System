@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bion.project2.controllers.MainFormController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@styles.css">
+         <children>
+            <BorderPane layoutX="92.0" layoutY="84.0" prefHeight="600.0" prefWidth="1100.0" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane maxWidth="269.0" minWidth="210.0" prefHeight="600.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="200.0" minWidth="200.0" prefHeight="600.0" prefWidth="222.0" styleClass="bg-black" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="imgView_Logo_Main" fitHeight="107.0" fitWidth="197.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="529.0" AnchorPane.topAnchor="5.0" />
+                              <VBox alignment="CENTER" layoutX="15.0" layoutY="128.0" spacing="15.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                                 <children>
+                                    <Button fx:id="btn_Dashboard" contentDisplay="RIGHT" graphicTextGap="50.0" mnemonicParsing="false" onAction="#navigateTabs" prefHeight="35.0" prefWidth="190.0" styleClass="btn-nav" stylesheets="@styles.css" text="Dashboard">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btn_Inventory" contentDisplay="RIGHT" graphicTextGap="60.0" mnemonicParsing="false" onAction="#navigateTabs" prefHeight="35.0" prefWidth="190.0" styleClass="btn-nav" stylesheets="@styles.css" text="Inventory">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="25.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btn_Customers" contentDisplay="RIGHT" graphicTextGap="53.0" mnemonicParsing="false" onAction="#navigateTabs" prefHeight="35.0" prefWidth="190.0" styleClass="btn-nav" stylesheets="@styles.css" text="Customers">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="32.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USERS" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btn_PlaceOrder" contentDisplay="RIGHT" graphicTextGap="45.0" mnemonicParsing="false" onAction="#navigateTabs" prefHeight="35.0" prefWidth="190.0" styleClass="btn-nav" stylesheets="@styles.css" text="Place Order">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="32.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="DESKTOP" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btn_OrderRecords" contentDisplay="RIGHT" graphicTextGap="30.0" layoutX="11.0" layoutY="160.0" mnemonicParsing="false" onAction="#navigateTabs" prefHeight="35.0" prefWidth="190.0" styleClass="btn-nav" stylesheets="@styles.css" text="Order Records">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="32.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="TABLE" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="30.0" layoutY="345.0" minHeight="230.0" prefHeight="230.0" prefWidth="192.0" spacing="5.0" styleClass="bg-signOut" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="94.0" prefWidth="200.0">
+                                       <children>
+                                          <StackPane maxHeight="90.0" maxWidth="90.0" prefHeight="90.0" prefWidth="90.0" styleClass="bg-RoundImg">
+                                             <children>
+                                                <ImageView fx:id="imgView_Employee" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                   <StackPane.margin>
+                                                      <Insets />
+                                                   </StackPane.margin>
+                                                </ImageView>
+                                             </children>
+                                          </StackPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label fx:id="lbl_EmployeeName" alignment="CENTER" prefHeight="26.0" prefWidth="189.0" text="Nimesh Sanjeewa" textFill="WHITE">
+                                       <font>
+                                          <Font name="Product Sans" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_EmployeeID" alignment="CENTER" prefHeight="21.0" prefWidth="190.0" text="CASHIER - 01" textFill="#7c7c7c">
+                                       <font>
+                                          <Font name="Product Sans" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btn_SignOut" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btn_SignOutOnAction" prefHeight="49.0" prefWidth="172.0" styleClass="btn-signOut" stylesheets="@styles.css" text="Sign Out">
+                                       <font>
+                                          <Font name="Product Sans Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" rotate="180.0" size="2em" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="600.0" prefWidth="855.0" styleClass="bg-blueGray" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="tabChangeArea" layoutX="9.0" layoutY="9.0" prefHeight="581.0" prefWidth="875.0" styleClass="bg-blueGray" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
